@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: linear-gradient(135deg, #4a6fa5, #3a5a85);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.icon-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.icon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.icon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.icon-card h3 {
+    margin-bottom: 10px;
+    color: #4a6fa5;
+}
+
+.scenario {
+    display: none;
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    transition: background-color 0.5s ease;
+}
+
+.scenario.active {
+    display: block;
+}
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #4a6fa5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background: #3a5a85;
+}
+
+.scenario-content {
+    margin-top: 40px;
+}
+
+.scenario-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #4a6fa5;
+}
+
+.visual-indicator {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0 40px;
+    padding: 15px;
+    background: #f0f4f8;
+    border-radius: 10px;
+}
+
+.indicator {
+    text-align: center;
+    flex: 1;
+}
+
+.indicator-icon {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.conversation-container {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.conversation {
+    min-height: 200px;
+    transition: opacity 0.5s ease;
+}
+
+.exchange {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.exchange.player .speech-bubble.right {
+    background: #e3f2fd;
+    margin-left: auto;
+}
+
+.exchange.player .speech-bubble.left {
+    background: #f5f5f5;
+}
+
+.exchange.sibling .speech-bubble.right {
+    background: #fff3e0;
+    margin-left: auto;
+}
+
+.exchange.sibling .speech-bubble.left {
+    background: #f5f5f5;
+}
+
+.exchange.member .speech-bubble.right {
+    background: #e8f5e9;
+    margin-left: auto;
+}
+
+.exchange.member .speech-bubble.left {
+    background: #f5f5f5;
+}
+
+.exchange.colleague .speech-bubble.right {
+    background: #ffebee;
+    margin-left: auto;
+}
+
+.exchange.colleague .speech-bubble.left {
+    background: #f5f5f5;
+}
+
+.exchange.happy .speech-bubble {
+    background: #fff9c4;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.exchange.serious .speech-bubble {
+    background: #ffcdd2;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.speech-bubble {
+    border-radius: 20px;
+    padding: 15px 20px;
+    position: relative;
+    max-width: 70%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.speech-bubble.left:after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 20px;
+    border-width: 10px 10px 10px 0;
+    border-style: solid;
+    border-color: transparent #f5f5f5;
+}
+
+.speech-bubble.right:after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 20px;
+    border-width: 10px 0 10px 10px;
+    border-style: solid;
+}
+
+.exchange.player .speech-bubble.right:after {
+    border-color: transparent transparent transparent #e3f2fd;
+}
+
+.exchange.sibling .speech-bubble.right:after {
+    border-color: transparent transparent transparent #fff3e0;
+}
+
+.exchange.member .speech-bubble.right:after {
+    border-color: transparent transparent transparent #e8f5e9;
+}
+
+.exchange.colleague .speech-bubble.right:after {
+    border-color: transparent transparent transparent #ffebee;
+}
+
+.speech-bubble.center:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px 10px 0;
+    border-style: solid;
+}
+
+.exchange.happy .speech-bubble.center:after {
+    border-color: #fff9c4 transparent transparent;
+}
+
+.exchange.serious .speech-bubble.center:after {
+    border-color: #ffcdd2 transparent transparent;
+}
+
+.speaker {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #4a6fa5;
+    font-size: 0.9rem;
+}
+
+.tone-indicator {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+    text-align: center;
+}
+
+.code-switch-btn {
+    display: block;
+    margin: 30px auto;
+    background: #4a6fa5;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+.code-switch-btn:hover {
+    background: #3a5a85;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 8px rgba(0,0,0,0.2);
+}
+
+.code-switch-btn:active {
+    transform: translateY(0);
+}
+
+.explanation {
+    background: #e8f4f8;
+    border-left: 4px solid #4a6fa5;
+    padding: 20px;
+    border-radius: 0 5px 5px 0;
+    margin-top: 30px;
+}
+
+.explanation h3 {
+    margin-bottom: 10px;
+    color: #4a6fa5;
+}
+
+/* Background colors for different scenarios when active */
+#brawlhallaScenario.active {
+    background-color: #f0f7ff;
+}
+
+#gymScenario.active {
+    background-color: #f0fff0;
+}
+
+#petsScenario.active {
+    background-color: #fffaf0;
+}
+
+/* Animation for speech bubbles */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.speech-bubble {
+    animation: fadeIn 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    .main-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .icon-card {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .speech-bubble {
+        max-width: 85%;
+    }
+    
+    .visual-indicator {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
