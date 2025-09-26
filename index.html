@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code-Switching Examples</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #4a6fa5;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .main-menu {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .icon-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .icon-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .icon {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+        
+        .icon-card h3 {
+            margin-bottom: 10px;
+            color: #4a6fa5;
+        }
+        
+        .scenario {
+            display: none;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .scenario.active {
+            display: block;
+        }
+        
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #4a6fa5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .scenario-content {
+            margin-top: 40px;
+        }
+        
+        .scenario-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #4a6fa5;
+        }
+        
+        .interaction {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+        
+        .speech-bubble {
+            background: #f0f0f0;
+            border-radius: 20px;
+            padding: 20px;
+            position: relative;
+            flex: 1;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .speech-bubble:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            border-width: 10px 10px 0;
+            border-style: solid;
+            border-color: #f0f0f0 transparent;
+            transform: translateX(-50%);
+        }
+        
+        .speaker {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #4a6fa5;
+        }
+        
+        .code-switch-btn {
+            background: #4a6fa5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+            align-self: center;
+        }
+        
+        .code-switch-btn:hover {
+            background: #3a5a85;
+        }
+        
+        .explanation {
+            background: #e8f4f8;
+            border-left: 4px solid #4a6fa5;
+            padding: 15px;
+            border-radius: 0 5px 5px 0;
+            margin-top: 20px;
+        }
+        
+        .persona {
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .visual-indicator {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        
+        .indicator {
+            text-align: center;
+            flex: 1;
+        }
+        
+        .indicator-icon {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+        
+        .brawlhalla {
+            color: #ff6b6b;
+        }
+        
+        .gym {
+            color: #4ecdc4;
+        }
+        
+        .pets {
+            color: #ffd166;
+        }
+        
+        @media (max-width: 600px) {
+            .interaction {
+                flex-direction: column;
+            }
+            
+            .icon-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Code-Switching Examples</h1>
+            <p class="subtitle">How we change our language in different situations</p>
+        </header>
+        
+        <div class="main-menu" id="mainMenu">
+            <div class="icon-card" data-scenario="brawlhalla">
+                <div class="icon">🎮</div>
+                <h3>Brawlhalla Player</h3>
+                <p>Advanced vs Simple Language</p>
+            </div>
+            <div class="icon-card" data-scenario="gym">
+                <div class="icon">🏋️</div>
+                <h3>Gym Front Desk</h3>
+                <p>Member vs Colleague</p>
+            </div>
+            <div class="icon-card" data-scenario="pets">
+                <div class="icon">🐾</div>
+                <h3>Talking to Pets</h3>
+                <p>Happy vs Serious Tone</p>
+            </div>
+        </div>
+        
+        <!-- Brawlhalla Scenario -->
+        <div class="scenario" id="brawlhallaScenario">
+            <button class="back-btn" onclick="showMainMenu()">← Back</button>
+            <h2 class="scenario-title">Brawlhalla Player: Advanced vs Simple Language</h2>
+            
+            <div class="visual-indicator">
+                <div class="indicator">
+                    <div class="indicator-icon">🎮</div>
+                    <div>With Players</div>
+                </div>
+                <div class="indicator">
+                    <div class="indicator-icon">👦</div>
+                    <div>With Sibling</div>
+                </div>
+            </div>
+            
+            <div class="interaction">
+                <div class="speech-bubble">
+                    <div class="persona">With Gaming Friends</div>
+                    <div class="speaker">You:</div>
+                    <p id="brawlhallaText">"We need to coordinate our edge-guarding and punish their recovery options. Their Rayman keeps going for dair approaches, so let's space with nairs and look for a gimp."</p>
+                </div>
+                <button class="code-switch-btn" onclick="switchBrawlhalla()">Code Switch</button>
+                <div class="speech-bubble">
+                    <div class="persona">With Younger Sibling</div>
+                    <div class="speaker">You:</div>
+                    <p id="brawlhallaSiblingText">"Just hit them when they try to come back to the platform. Watch out when he jumps at you from above."</p>
+                </div>
+            </div>
+            
+            <div class="explanation">
+                <h3>What's happening here?</h3>
+                <p>When talking to experienced players, you use advanced gaming terminology ("edge-guarding", "recovery options", "nairs", "gimp"). With your sibling, you simplify the language to basic concepts they can understand.</p>
+            </div>
+        </div>
+        
+        <!-- Gym Scenario -->
+        <div class="scenario" id="gymScenario">
+            <button class="back-btn" onclick="showMainMenu()">← Back</button>
+            <h2 class="scenario-title">Gym Front Desk: Member vs Colleague</h2>
+            
+            <div class="visual-indicator">
+                <div class="indicator">
+                    <div class="indicator-icon">🙋</div>
+                    <div>With Member</div>
+                </div>
+                <div class="indicator">
+                    <div class="indicator-icon">👥</div>
+                    <div>With Colleague</div>
+                </div>
+            </div>
+            
+            <div class="interaction">
+                <div class="speech-bubble">
+                    <div class="persona">With Gym Member</div>
+                    <div class="speaker">You:</div>
+                    <p id="gymText">"Good morning! How can I assist you today? Our new yoga class starts at 6 PM if you're interested. Would you like me to check availability for you?"</p>
+                </div>
+                <button class="code-switch-btn" onclick="switchGym()">Code Switch</button>
+                <div class="speech-bubble">
+                    <div class="persona">With Colleague</div>
+                    <div class="speaker">You:</div>
+                    <p id="gymColleagueText">"Hey, can you believe that guy? Third time this week asking about the yoga class. The schedule's right there on the wall!"</p>
+                </div>
+            </div>
+            
+            <div class="explanation">
+                <h3>What's happening here?</h3>
+                <p>With members, you use formal, helpful language appropriate for customer service. With colleagues, you switch to informal, conversational language where you can express frustration or share inside perspectives.</p>
+            </div>
+        </div>
+        
+        <!-- Pets Scenario -->
+        <div class="scenario" id="petsScenario">
+            <button class="back-btn" onclick="showMainMenu()">← Back</button>
+            <h2 class="scenario-title">Talking to Pets: Happy vs Serious Tone</h2>
+            
+            <div class="visual-indicator">
+                <div class="indicator">
+                    <div class="indicator-icon">😊</div>
+                    <div>Happy Tone</div>
+                </div>
+                <div class="indicator">
+                    <div class="indicator-icon">😠</div>
+                    <div>Serious Tone</div>
+                </div>
+            </div>
+            
+            <div class="interaction">
+                <div class="speech-bubble">
+                    <div class="persona">Praising Your Pet</div>
+                    <div class="speaker">You:</div>
+                    <p id="petsText">"Who's a good boy? Yes, you are! Such a clever puppy! Look at you being so smart!"</p>
+                    <div style="margin-top: 10px; font-style: italic; color: #666;">(High-pitched, excited voice)</div>
+                </div>
+                <button class="code-switch-btn" onclick="switchPets()">Code Switch</button>
+                <div class="speech-bubble">
+                    <div class="persona">Disciplining Your Pet</div>
+                    <div class="speaker">You:</div>
+                    <p id="petsSeriousText">"No. Get down. We do not chew on shoes. Bad dog."</p>
+                    <div style="margin-top: 10px; font-style: italic; color: #666;">(Low, firm voice)</div>
+                </div>
+            </div>
+            
+            <div class="explanation">
+                <h3>What's happening here?</h3>
+                <p>When praising pets, we use a high-pitched, excited tone with simple, repetitive phrases. When disciplining, we switch to a lower, serious tone with clear, direct commands. Pets respond more to tone than specific words.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Show the main menu and hide all scenarios
+        function showMainMenu() {
+            document.getElementById('mainMenu').style.display = 'flex';
+            document.querySelectorAll('.scenario').forEach(scenario => {
+                scenario.classList.remove('active');
+            });
+        }
+        
+        // Show a specific scenario and hide the main menu
+        function showScenario(scenarioId) {
+            document.getElementById('mainMenu').style.display = 'none';
+            document.querySelectorAll('.scenario').forEach(scenario => {
+                scenario.classList.remove('active');
+            });
+            document.getElementById(scenarioId).classList.add('active');
+        }
+        
+        // Set up event listeners for the icon cards
+        document.querySelectorAll('.icon-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const scenario = this.getAttribute('data-scenario') + 'Scenario';
+                showScenario(scenario);
+            });
+        });
+        
+        // State variables for each scenario
+        let brawlhallaState = 0;
+        let gymState = 0;
+        let petsState = 0;
+        
+        // Brawlhalla code-switching function
+        function switchBrawlhalla() {
+            const textElement = document.getElementById('brawlhallaText');
+            const siblingTextElement = document.getElementById('brawlhallaSiblingText');
+            
+            if (brawlhallaState === 0) {
+                textElement.textContent = '"Their spacing is predictable. Let's capitalize on their whiffed signatures with quick punishes."';
+                siblingTextElement.textContent = '"Wait for them to miss their big moves, then hit them back."';
+                brawlhallaState = 1;
+            } else {
+                textElement.textContent = '"We need to coordinate our edge-guarding and punish their recovery options. Their Rayman keeps going for dair approaches, so let's space with nairs and look for a gimp."';
+                siblingTextElement.textContent = '"Just hit them when they try to come back to the platform. Watch out when he jumps at you from above."';
+                brawlhallaState = 0;
+            }
+        }
+        
+        // Gym code-switching function
+        function switchGym() {
+            const textElement = document.getElementById('gymText');
+            const colleagueTextElement = document.getElementById('gymColleagueText');
+            
+            if (gymState === 0) {
+                textElement.textContent = '"I'd be happy to help you with that membership inquiry. Let me pull up your account details."';
+                colleagueTextElement.textContent = '"Ugh, another membership question. Don't they know how to check their app?"';
+                gymState = 1;
+            } else {
+                textElement.textContent = '"Good morning! How can I assist you today? Our new yoga class starts at 6 PM if you're interested. Would you like me to check availability for you?"';
+                colleagueTextElement.textContent = '"Hey, can you believe that guy? Third time this week asking about the yoga class. The schedule's right there on the wall!"';
+                gymState = 0;
+            }
+        }
+        
+        // Pets code-switching function
+        function switchPets() {
+            const textElement = document.getElementById('petsText');
+            const seriousTextElement = document.getElementById('petsSeriousText');
+            
+            if (petsState === 0) {
+                textElement.textContent = '"Look at this fluffy baby! Are you having fun? Yes you are! Such a happy doggo!"';
+                seriousTextElement.textContent = '"Leave it. That is not yours. Go to your bed."';
+                petsState = 1;
+            } else {
+                textElement.textContent = '"Who's a good boy? Yes, you are! Such a clever puppy! Look at you being so smart!"';
+                seriousTextElement.textContent = '"No. Get down. We do not chew on shoes. Bad dog."';
+                petsState = 0;
+            }
+        }
+    </script>
+</body>
+</html>
