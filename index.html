@@ -10,65 +10,47 @@
     <div class="container">
         <header>
             <h1>Code-Switching Ethnography</h1>
-            <p class="subtitle">Field observations of linguistic & behavioral adaptation</p>
+            <p class="subtitle">An analysis of linguistic adaptation across social contexts</p>
         </header>
         
         <div class="main-menu" id="mainMenu">
             <div class="icon-card" data-scenario="brawlhalla">
                 <div class="icon">🎮</div>
-                <h3>Video Gaming</h3>
-                <p>Advanced vs Simple Language</p>
+                <h3>Gaming Context</h3>
+                <p>Expert vs Novice Communication</p>
             </div>
             <div class="icon-card" data-scenario="gym">
                 <div class="icon">🏋️</div>
-                <h3>Gym Front Desk</h3>
-                <p>Member vs Colleague</p>
+                <h3>Service Context</h3>
+                <p>Professional vs Peer Interaction</p>
             </div>
             <div class="icon-card" data-scenario="pets">
                 <div class="icon">🐾</div>
-                <h3>Pet Interactions</h3>
-                <p>Affectionate vs Disciplinary</p>
+                <h3>Animal Communication</h3>
+                <p>Affection vs Discipline Registers</p>
             </div>
         </div>
         
-        <!-- Video Gaming Scenario -->
+        <!-- Brawlhalla Scenario -->
         <div class="scenario" id="brawlhallaScenario">
-            <button class="back-btn" onclick="showMainMenu()">← Back to Main</button>
-            <h2 class="scenario-title">Case Study 1: Video Gaming Communication</h2>
+            <button class="back-btn" onclick="showMainMenu()">← Back to Menu</button>
+            <h2 class="scenario-title">Case Study 1: Gaming Expertise Context</h2>
             
-            <div class="ethnographic-context">
-                <h3>📋 Ethnographic Context</h3>
-                <div class="context-grid">
-                    <div class="context-item">
-                        <h4>Setting & Environment</h4>
-                        <p><strong>Date Observed:</strong> October 28, 2023<br>
-                        <strong>Location:</strong> Living room, gaming console setup<br>
-                        <strong>Physical Space:</strong> Couch, TV, console, two controllers<br>
-                        <strong>Atmosphere:</strong> Casual, relaxed gaming session</p>
-                    </div>
-                    <div class="context-item">
-                        <h4>Participants</h4>
-                        <p><strong>Me:</strong> 21-year-old experienced gamer<br>
-                        <strong>Friend Alex:</strong> 22-year-old gaming partner (similar skill level)<br>
-                        <strong>Sibling Jamie:</strong> 14-year-old casual gamer</p>
-                    </div>
-                    <div class="context-item">
-                        <h4>Observation Notes</h4>
-                        <p><strong>Duration:</strong> 45-minute gaming session<br>
-                        <strong>Game:</strong> Brawlhalla (fighting game)<br>
-                        <strong>Transition Point:</strong> Friend left, sibling joined mid-session</p>
-                    </div>
+            <div class="context-header">
+                <div class="context-info">
+                    <h3>Setting: Living Room Gaming Session</h3>
+                    <p>Date: October 15, 2024 | Time: 8:30 PM | Location: Apartment living room</p>
                 </div>
             </div>
-
+            
             <div class="visual-indicator">
                 <div class="indicator">
                     <div class="indicator-icon">🎮</div>
-                    <div>With Gaming Friend</div>
+                    <div>With Experienced Players</div>
                 </div>
                 <div class="indicator">
                     <div class="indicator-icon">👦</div>
-                    <div>With Younger Sibling</div>
+                    <div>With Novice Sibling</div>
                 </div>
             </div>
             
@@ -76,84 +58,80 @@
                 <div class="conversation" id="brawlhallaConversation">
                     <div class="exchange player">
                         <div class="speech-bubble left">
-                            <div class="speaker">Alex (friend):</div>
+                            <div class="speaker">Teammate (Alex):</div>
                             <p>"Their Scarlet keeps spamming dair to get close. How should we counter?"</p>
-                            <div class="non-verbal">[Leaning forward, focused expression, rapid controller movements]</div>
                         </div>
                     </div>
+                    
+                    <div class="nonverbal-narration">
+                        <div class="narration-bubble">
+                            <strong>Non-Verbal Context:</strong> Alex leans forward, controller gripped tightly. Eyes fixed on screen, legs crossed casually. Wears gaming headset, gaming T-shirt. Distance: 4 feet apart, both facing TV.
+                        </div>
+                    </div>
+                    
                     <div class="exchange player">
                         <div class="speech-bubble right">
                             <div class="speaker">Me:</div>
-                            <p>"Let's space with sairs & look for a gimp, then I'll edge-guard and you punish her recoveries."</p>
-                            <div class="non-verbal">[Intense eye contact with screen, strategic pause between phrases]</div>
+                            <p>"Let's space with sairs & look for a gimp opportunity. I'll handle edge-guarding while you punish her recovery patterns."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="nonverbal-narration">
+                        <div class="narration-bubble">
+                            <strong>Non-Verbal Context:</strong> I make quick hand gestures illustrating game strategies. Maintains eye contact with screen, occasional glances at Alex. Body tense during intense gameplay moments.
                         </div>
                     </div>
                 </div>
                 
-                <button class="code-switch-btn" onclick="switchBrawlhalla()">Observe Code Switch</button>
+                <button class="code-switch-btn" onclick="switchBrawlhalla()">Switch to Novice Interaction</button>
                 
                 <div class="conversation" id="brawlhallaSiblingConversation" style="display: none;">
                     <div class="exchange sibling">
                         <div class="speech-bubble left">
-                            <div class="speaker">Jamie (sibling):</div>
-                            <p>"How do I beat this guy? He keeps jumping at me!"</p>
-                            <div class="non-verbal">[Frustrated tone, slouched posture, casual controller grip]</div>
+                            <div class="speaker">Younger Sibling (Jamie):</div>
+                            <p>"How do I beat this guy? He keeps jumping at me and I can't hit him!"</p>
                         </div>
                     </div>
+                    
+                    <div class="nonverbal-narration">
+                        <div class="narration-bubble">
+                            <strong>Non-Verbal Context:</strong> Jamie stands anxiously, holding controller awkwardly. Frequent frustrated sighs. Wears school clothes, backpack nearby. Distance: 2 feet, me leaning toward Jamie.
+                        </div>
+                    </div>
+                    
                     <div class="exchange sibling">
                         <div class="speech-bubble right">
                             <div class="speaker">Me:</div>
-                            <p>"Just hit him when he tries to come back to the platform. Watch out when he jumps at you from above."</p>
-                            <div class="non-verbal">[Relaxed posture, occasional glances away from screen, slower speech]</div>
+                            <p>"Just wait for him to come back to the platform and hit him then. Watch when he jumps from above and move away."</p>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="performance-analysis">
-                <h3>🎭 Performance & Kinesic Analysis</h3>
-                <div class="analysis-grid">
-                    <div class="analysis-item">
-                        <h4>With Gaming Friend</h4>
-                        <ul>
-                            <li><strong>Posture:</strong> Forward-leaning, intense focus</li>
-                            <li><strong>Eye Contact:</strong> Primarily with screen, occasional quick glances</li>
-                            <li><strong>Vocal Tone:</strong> Rapid, technical, focused</li>
-                            <li><strong>Gesture:</strong> Precise controller movements</li>
-                        </ul>
-                    </div>
-                    <div class="analysis-item">
-                        <h4>With Younger Sibling</h4>
-                        <ul>
-                            <li><strong>Posture:</strong> Relaxed, occasionally leaning back</li>
-                            <li><strong>Eye Contact:</strong> Split between screen and sibling</li>
-                            <li><strong>Vocal Tone:</strong> Slower, explanatory, patient</li>
-                            <li><strong>Gesture:</strong> More expressive, teaching-oriented</li>
-                        </ul>
+                    
+                    <div class="nonverbal-narration">
+                        <div class="narration-bubble">
+                            <strong>Non-Verbal Context:</strong> I point at screen, use slow, deliberate hand movements. Smiles encouragingly. Body orientation turned toward Jamie in teaching posture.
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="linguistic-analysis">
-                <h3>🔍 Linguistic & Social Rules Analysis</h3>
+            <div class="analysis">
+                <h3>Ethnographic Analysis: Rules of the Code</h3>
                 <div class="analysis-grid">
-                    <div class="analysis-item">
-                        <h4>Linguistic Code-Switching</h4>
-                        <ul>
-                            <li><strong>Technical Jargon:</strong> "dair", "sairs", "gimp", "edge-guard", "recoveries"</li>
-                            <li><strong>Simplified Language:</strong> Basic instructions, avoiding complex terms</li>
-                            <li><strong>Sentence Structure:</strong> Complex vs simple constructions</li>
-                            <li><strong>Assumed Knowledge:</strong> High technical understanding vs basic concepts</li>
-                        </ul>
+                    <div class="analysis-point">
+                        <h4>Linguistic Adaptation</h4>
+                        <p>With experienced players, I use specialized gaming terminology ("edge-guarding", "recovery patterns", "sairs") that indexes membership in the gaming community. With novices, I switch to basic directional language that aligns with their conceptual understanding.</p>
                     </div>
-                    <div class="analysis-item">
-                        <h4>Social Rules Indexed</h4>
-                        <ul>
-                            <li><strong>Peer Relationship:</strong> Equal status, shared expertise</li>
-                            <li><strong>Caregiver Role:</strong> Teaching, simplifying, patient explanation</li>
-                            <li><strong>Context Appropriateness:</strong> Matching language to audience capability</li>
-                            <li><strong>Relationship Maintenance:</strong> Building rapport through shared language</li>
-                        </ul>
+                    <div class="analysis-point">
+                        <h4>Bodily Performance</h4>
+                        <p>My posture shifts from competitive tension (forward lean, intense focus) with peers to pedagogical openness (turned body, pointing gestures) with novices. This bodily code-switching reinforces the social roles of competitor versus instructor.</p>
+                    </div>
+                    <div class="analysis-point">
+                        <h4>Proxemic Rules</h4>
+                        <p>The distance decreases from 4 feet (peer distance) to 2 feet (teaching distance), signaling the shift from collaborative play to instructional relationship. The closer proximity enables pointing and demonstration.</p>
+                    </div>
+                    <div class="analysis-point">
+                        <h4>Social Indexicality</h4>
+                        <p>These switches index different social frameworks: technical proficiency and shared expertise with peers versus patience and knowledge transmission with novices. The code-switching maintains social harmony by adapting to the interlocutor's communicative needs.</p>
                     </div>
                 </div>
             </div>
@@ -161,34 +139,16 @@
         
         <!-- Gym Scenario -->
         <div class="scenario" id="gymScenario">
-            <button class="back-btn" onclick="showMainMenu()">← Back to Main</button>
-            <h2 class="scenario-title">Case Study 2: Service Industry Communication</h2>
+            <button class="back-btn" onclick="showMainMenu()">← Back to Menu</button>
+            <h2 class="scenario-title">Case Study 2: Service Industry Context</h2>
             
-            <div class="ethnographic-context">
-                <h3>📋 Ethnographic Context</h3>
-                <div class="context-grid">
-                    <div class="context-item">
-                        <h4>Setting & Environment</h4>
-                        <p><strong>Date Observed:</strong> November 2, 2023<br>
-                        <strong>Location:</strong> University gym front desk<br>
-                        <strong>Physical Space:</strong> Professional counter, membership system, schedule posters<br>
-                        <strong>Atmosphere:</strong> Busy student environment, professional service setting</p>
-                    </div>
-                    <div class="context-item">
-                        <h4>Participants</h4>
-                        <p><strong>Me:</strong> Front desk staff (uniformed)<br>
-                        <strong>Member:</strong> Unknown student (casual workout clothes)<br>
-                        <strong>Colleague Sarah:</strong> Coworker (same uniform, known relationship)</p>
-                    </div>
-                    <div class="context-item">
-                        <h4>Observation Notes</h4>
-                        <p><strong>Duration:</strong> 3-minute interaction<br>
-                        <strong>Transition:</strong> Immediate switch after member walked away<br>
-                        <strong>Professional Context:</strong> Paid position, customer service expectations</p>
-                    </div>
+            <div class="context-header">
+                <div class="context-info">
+                    <h3>Setting: University Gym Front Desk</h3>
+                    <p>Date: October 18, 2024 | Time: 2:15 PM | Location: Campus recreation center</p>
                 </div>
             </div>
-
+            
             <div class="visual-indicator">
                 <div class="indicator">
                     <div class="indicator-icon">🙋</div>
@@ -204,84 +164,80 @@
                 <div class="conversation" id="gymConversation">
                     <div class="exchange member">
                         <div class="speech-bubble left">
-                            <div class="speaker">Member:</div>
+                            <div class="speaker">Gym Member:</div>
                             <p>"Hi, I'm interested in joining a yoga class. What's available this week and where do I sign up?"</p>
-                            <div class="non-verbal">[Approaching counter, slightly uncertain posture, looking around]</div>
                         </div>
                     </div>
+                    
+                    <div class="nonverbal-narration">
+                        <div class="narration-bubble">
+                            <strong>Non-Verbal Context:</strong> Member stands formally at counter, hands on desk. Wears workout clothes, slightly out of breath. Maintains professional distance (3 feet). I stand straight, uniform visible, name tag showing.
+                        </div>
+                    </div>
+                    
                     <div class="exchange member">
                         <div class="speech-bubble right">
                             <div class="speaker">Me:</div>
-                            <p>"Good choice! Our yoga class with Kitty starts at 12 PM tomorrow and it's open to all members, no registration needed."</p>
-                            <div class="non-verbal">[Professional smile, upright posture, gesturing toward schedule]</div>
+                            <p>"Excellent choice! Our yoga class with Kitty starts at 12 PM tomorrow in Studio B. It's included with your membership—no registration required."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="nonverbal-narration">
+                        <div class="narration-bubble">
+                            <strong>Non-Verbal Context:</strong> I maintain eye contact, professional smile. Gestures toward class schedule poster. Body positioned at formal 90-degree angle to counter. Uses open palm gestures.
                         </div>
                     </div>
                 </div>
                 
-                <button class="code-switch-btn" onclick="switchGym()">Observe Code Switch</button>
+                <button class="code-switch-btn" onclick="switchGym()">Switch to Colleague Interaction</button>
                 
                 <div class="conversation" id="gymColleagueConversation" style="display: none;">
                     <div class="exchange colleague">
                         <div class="speech-bubble left">
-                            <div class="speaker">Sarah (colleague):</div>
-                            <p>"Another class question? The schedule's right here!" *gestures to poster*</p>
-                            <div class="non-verbal">[Rolling eyes slightly, leaning casually on counter, knowing smile]</div>
+                            <div class="speaker">Colleague (Sam):</div>
+                            <p>"Another class question? The schedule's literally right here!" *points dramatically to poster*</p>
                         </div>
                     </div>
+                    
+                    <div class="nonverbal-narration">
+                        <div class="narration-bubble">
+                            <strong>Non-Verbal Context:</strong> Sam leans casually against back counter, arms crossed. Wears same staff uniform but untucked. Distance: 1.5 feet, relaxed posture. Rolls eyes playfully.
+                        </div>
+                    </div>
+                    
                     <div class="exchange colleague">
                         <div class="speech-bubble right">
                             <div class="speaker">Me:</div>
-                            <p>"I know, right? I got three this week! At least it's an easy one to answer."</p>
-                            <div class="non-verbal">[Relaxed posture, shared eye roll, casual tone]</div>
+                            <p>"Tell me about it! Third one this week. At least it's an easy answer—better than explaining the membership portal again."</p>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="performance-analysis">
-                <h3>🎭 Performance & Kinesic Analysis</h3>
-                <div class="analysis-grid">
-                    <div class="analysis-item">
-                        <h4>With Gym Member</h4>
-                        <ul>
-                            <li><strong>Posture:</strong> Professional, upright, attentive</li>
-                            <li><strong>Facial Expression:</strong> Customer service smile, neutral</li>
-                            <li><strong>Vocal Tone:</strong> Clear, helpful, slightly formal</li>
-                            <li><strong>Gesture:</strong> Purposeful, informative pointing</li>
-                        </ul>
-                    </div>
-                    <div class="analysis-item">
-                        <h4>With Colleague</h4>
-                        <ul>
-                            <li><strong>Posture:</strong> Relaxed, leaning, comfortable</li>
-                            <li><strong>Facial Expression:</strong> Expressive, shared understanding</li>
-                            <li><strong>Vocal Tone:</strong> Casual, conversational, lowered volume</li>
-                            <li><strong>Gesture:</strong> Informal, emphatic</li>
-                        </ul>
+                    
+                    <div class="nonverbal-narration">
+                        <div class="narration-bubble">
+                            <strong>Non-Verbal Context:</strong> I mirror Sam's relaxed posture, lean back against wall. Shares knowing smile, uses dismissive hand wave. Shoulders relaxed, professional facade dropped.
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="linguistic-analysis">
-                <h3>🔍 Linguistic & Social Rules Analysis</h3>
+            <div class="analysis">
+                <h3>Ethnographic Analysis: Rules of the Code</h3>
                 <div class="analysis-grid">
-                    <div class="analysis-item">
-                        <h4>Linguistic Code-Switching</h4>
-                        <ul>
-                            <li><strong>Formal vs Informal:</strong> Structured responses vs casual conversation</li>
-                            <li><strong>Vocabulary:</strong> Professional terminology vs everyday language</li>
-                            <li><strong>Sentence Structure:</strong> Complete sentences vs fragments</li>
-                            <li><strong>Politeness Markers:</strong> "Good choice!" vs shared frustration</li>
-                        </ul>
+                    <div class="analysis-point">
+                        <h4>Institutional Framing</h4>
+                        <p>The professional code uses formal register and institutional vocabulary ("membership", "registration", "studio") that indexes my role as service provider. The peer code uses informal language that indexes shared workplace experience.</p>
                     </div>
-                    <div class="analysis-item">
-                        <h4>Social Rules Indexed</h4>
-                        <ul>
-                            <li><strong>Professional Role:</strong> Customer service expectations</li>
-                            <li><strong>Workplace Hierarchy:</strong> Equal status with colleague</li>
-                            <li><strong>Backstage/Frontstage:</strong> Goffman's dramaturgical theory</li>
-                            <li><strong>Social Bonding:</strong> Building camaraderie through shared experience</li>
-                        </ul>
+                    <div class="analysis-point">
+                        <h4>Kinesic Signaling</h4>
+                        <p>My body shifts from upright, professional posture to relaxed, mirrored stances. With members, I use formal gestures (open palms, pointing to resources); with colleagues, I use casual gestures (eye rolls, dismissive waves) that build camaraderie.</p>
+                    </div>
+                    <div class="analysis-point">
+                        <h4>Proxemic Boundaries</h4>
+                        <p>The distance changes from professional (3 feet) to personal (1.5 feet), marking the boundary between customer service territory and colleague solidarity space. This physical demarcation reinforces the social roles.</p>
+                    </div>
+                    <div class="analysis-point">
+                        <h4>Social Function</h4>
+                        <p>This code-switching serves to maintain professional boundaries with customers while building workplace solidarity with colleagues. The switches index different relational frameworks: service transaction versus peer bonding.</p>
                     </div>
                 </div>
             </div>
@@ -289,42 +245,24 @@
         
         <!-- Pets Scenario -->
         <div class="scenario" id="petsScenario">
-            <button class="back-btn" onclick="showMainMenu()">← Back to Main</button>
-            <h2 class="scenario-title">Case Study 3: Human-Animal Communication</h2>
+            <button class="back-btn" onclick="showMainMenu()">← Back to Menu</button>
+            <h2 class="scenario-title">Case Study 3: Interspecies Communication</h2>
             
-            <div class="ethnographic-context">
-                <h3>📋 Ethnographic Context</h3>
-                <div class="context-grid">
-                    <div class="context-item">
-                        <h4>Setting & Environment</h4>
-                        <p><strong>Date Observed:</strong> November 5, 2023<br>
-                        <strong>Location:</strong> Friend's backyard during visit<br>
-                        <strong>Physical Space:</strong> Open lawn, dog toys scattered, outdoor seating<br>
-                        <strong>Atmosphere:</strong> Social visit, casual outdoor setting</p>
-                    </div>
-                    <div class="context-item">
-                        <h4>Participants</h4>
-                        <p><strong>Friend Taylor:</strong> Pet owner (mid-20s)<br>
-                        <strong>Luna:</strong> 2-year-old golden retriever<br>
-                        <strong>Me:</strong> Observer and occasional participant</p>
-                    </div>
-                    <div class="context-item">
-                        <h4>Observation Notes</h4>
-                        <p><strong>Duration:</strong> 15-minute play session<br>
-                        <strong>Behavior Trigger:</strong> Dog performing trick vs inappropriate jumping<br>
-                        <strong>Immediate Switch:</strong> Based on dog's behavior</p>
-                    </div>
+            <div class="context-header">
+                <div class="context-info">
+                    <h3>Setting: Friend's Apartment</h3>
+                    <p>Date: October 20, 2024 | Time: 4:00 PM | Location: Living room with new puppy</p>
                 </div>
             </div>
-
+            
             <div class="visual-indicator">
                 <div class="indicator">
                     <div class="indicator-icon">😊</div>
-                    <div>Affectionate Praise</div>
+                    <div>Affectionate Register</div>
                 </div>
                 <div class="indicator">
                     <div class="indicator-icon">😠</div>
-                    <div>Behavior Correction</div>
+                    <div>Disciplinary Register</div>
                 </div>
             </div>
             
@@ -332,72 +270,56 @@
                 <div class="conversation" id="petsConversation">
                     <div class="exchange happy">
                         <div class="speech-bubble center">
-                            <div class="speaker">Taylor (happy voice):</div>
+                            <div class="speaker">Friend (affectionate voice):</div>
                             <p>"Who's a good girl? Yes, you are! Such a quick puppy! Look at you running so fast!"</p>
-                            <div class="non-verbal">[Crouched down, open arms, big smile, high-pitched voice]</div>
-                            <div class="tone-indicator">✨ High-pitched, excited tone ✨</div>
+                            <div class="tone-indicator">🎵 High-pitched, melodic tone 🎵</div>
+                        </div>
+                    </div>
+                    
+                    <div class="nonverbal-narration">
+                        <div class="narration-bubble">
+                            <strong>Non-Verbal Context:</strong> Friend crouches low, arms open wide. Makes exaggerated happy facial expressions. Puppy wears colorful collar, wags tail vigorously. Distance: 3 feet, inviting posture.
                         </div>
                     </div>
                 </div>
                 
-                <button class="code-switch-btn" onclick="switchPets()">Observe Code Switch</button>
+                <button class="code-switch-btn" onclick="switchPets()">Switch to Disciplinary Mode</button>
                 
                 <div class="conversation" id="petsSeriousConversation" style="display: none;">
                     <div class="exchange serious">
                         <div class="speech-bubble center">
-                            <div class="speaker">Taylor (serious voice):</div>
-                            <p>"No. Get down. We do not climb on friends. Bad dog."</p>
-                            <div class="non-verbal">[Standing upright, crossed arms, stern expression, direct eye contact]</div>
-                            <div class="tone-indicator">⬇️ Low, firm tone ⬇️</div>
+                            <div class="speaker">Friend (firm voice):</div>
+                            <p>"No. Get down. We do not jump on people. Bad dog."</p>
+                            <div class="tone-indicator">⬇️ Low, monotone, firm delivery ⬇️</div>
+                        </div>
+                    </div>
+                    
+                    <div class="nonverbal-narration">
+                        <div class="narration-bubble">
+                            <strong>Non-Verbal Context:</strong> Friend stands upright, arms crossed or on hips. Maintains stern eye contact with puppy. Facial expression neutral/serious. Puppy's ears flatten, tail stops wagging.
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="performance-analysis">
-                <h3>🎭 Performance & Kinesic Analysis</h3>
-                <div class="analysis-grid">
-                    <div class="analysis-item">
-                        <h4>Affectionate Praise</h4>
-                        <ul>
-                            <li><strong>Body Position:</strong> Crouched, at dog's level</li>
-                            <li><strong>Facial Expression:</strong> Wide smile, excited eyes</li>
-                            <li><strong>Vocal Quality:</strong> High pitch, varied intonation</li>
-                            <li><strong>Gesture:</strong> Open arms, inviting posture</li>
-                        </ul>
-                    </div>
-                    <div class="analysis-item">
-                        <h4>Behavior Correction</h4>
-                        <ul>
-                            <li><strong>Body Position:</strong> Upright, authoritative stance</li>
-                            <li><strong>Facial Expression:</strong> Stern, neutral mouth</li>
-                            <li><strong>Vocal Quality:</strong> Low pitch, monotone</li>
-                            <li><strong>Gesture:</strong> Crossed arms, still posture</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
             
-            <div class="linguistic-analysis">
-                <h3>🔍 Linguistic & Social Rules Analysis</h3>
+            <div class="analysis">
+                <h3>Ethnographic Analysis: Rules of the Code</h3>
                 <div class="analysis-grid">
-                    <div class="analysis-item">
-                        <h4>Linguistic Code-Switching</h4>
-                        <ul>
-                            <li><strong>Vocabulary:</strong> Affectionate terms vs direct commands</li>
-                            <li><strong>Sentence Structure:</strong> Repetitive, excited vs short, clear</li>
-                            <li><strong>Pitch Variation:</strong> Wide emotional range vs controlled tone</li>
-                            <li><strong>Repetition:</strong> Encouraging repetition vs single commands</li>
-                        </ul>
+                    <div class="analysis-point">
+                        <h4>Prosodic Adaptation</h4>
+                        <p>The vocal code switches from high-pitched, variable intonation (affectionate) to low, monotone delivery (disciplinary). This prosodic code-switching aligns with canine auditory perception patterns that interpret pitch variation as positive and monotone as negative.</p>
                     </div>
-                    <div class="analysis-item">
-                        <h4>Social Rules Indexed</h4>
-                        <ul>
-                            <li><strong>Human-Animal Hierarchy:</strong> Caregiver authority</li>
-                            <li><strong>Training Methodology:</strong> Positive reinforcement vs correction</li>
-                            <li><strong>Emotional Communication:</strong> Tone over semantic meaning</li>
-                            <li><strong>Relationship Dynamics:</strong> Affection balanced with boundaries</li>
-                        </ul>
+                    <div class="analysis-point">
+                        <h4>Kinesic Reinforcement</h4>
+                        <p>Body posture shifts dramatically from open, inviting crouches to closed, authoritative stances. Facial expressions change from exaggerated positivity to neutral seriousness, creating visual cues that reinforce the vocal messages.</p>
+                    </div>
+                    <div class="analysis-point">
+                        <h4>Linguistic Simplicity</h4>
+                        <p>Both registers use simple, repetitive language structures appropriate for canine comprehension. The affectionate register uses questions and exclamations; the disciplinary register uses direct commands and negative constructions.</p>
+                    </div>
+                    <div class="analysis-point">
+                        <h4>Interspecies Social Rules</h4>
+                        <p>This code-switching indexes the human understanding of canine social structures and learning patterns. The switches serve to establish clear boundaries (disciplinary) while maintaining bonding (affectionate), mirroring pack dynamics in canine social organization.</p>
                     </div>
                 </div>
             </div>
