@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -21,75 +21,65 @@ body {
 header {
     text-align: center;
     margin-bottom: 40px;
-    padding: 30px;
+    padding: 20px;
     background: linear-gradient(135deg, #4a6fa5, #3a5a85);
     color: white;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
-    font-weight: 700;
 }
 
 .subtitle {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     opacity: 0.9;
-    font-weight: 300;
 }
 
 .main-menu {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 50px;
+    gap: 20px;
+    margin-bottom: 40px;
 }
 
 .icon-card {
     background: white;
-    border-radius: 15px;
-    padding: 30px 20px;
-    width: 280px;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
     text-align: center;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border: 2px solid transparent;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .icon-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    border-color: #4a6fa5;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .icon {
-    font-size: 5rem;
-    margin-bottom: 20px;
+    font-size: 4rem;
+    margin-bottom: 15px;
 }
 
 .icon-card h3 {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: #4a6fa5;
-    font-size: 1.5rem;
-}
-
-.icon-card p {
-    color: #666;
-    font-size: 1rem;
 }
 
 .scenario {
     display: none;
     background: white;
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     position: relative;
-    transition: all 0.5s ease;
+    transition: background-color 0.5s ease;
 }
 
 .scenario.active {
@@ -98,24 +88,22 @@ h1 {
 
 .back-btn {
     position: absolute;
-    top: 25px;
-    left: 25px;
-    background: #6c757d;
+    top: 20px;
+    left: 20px;
+    background: #4a6fa5;
     color: white;
     border: none;
-    border-radius: 8px;
-    padding: 10px 18px;
+    border-radius: 5px;
+    padding: 8px 15px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 8px;
-    transition: all 0.3s ease;
-    font-weight: 500;
+    gap: 5px;
+    transition: background 0.3s;
 }
 
 .back-btn:hover {
-    background: #5a6268;
-    transform: translateX(-3px);
+    background: #3a5a85;
 }
 
 .scenario-content {
@@ -124,105 +112,41 @@ h1 {
 
 .scenario-title {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: #4a6fa5;
-    border-bottom: 3px solid #4a6fa5;
-    padding-bottom: 20px;
-    font-size: 2.2rem;
 }
 
-/* Ethnographic Context Styles */
-.ethnographic-context {
-    background: #f8f9fa;
-    border-radius: 12px;
-    padding: 30px;
-    margin-bottom: 35px;
-    border-left: 5px solid #4a6fa5;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
-}
-
-.ethnographic-context h3 {
-    color: #4a6fa5;
-    margin-bottom: 25px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 1.6rem;
-}
-
-.context-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-.context-item {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
-}
-
-.context-item:hover {
-    transform: translateY(-3px);
-}
-
-.context-item h4 {
-    color: #4a6fa5;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #e9ecef;
-    padding-bottom: 8px;
-    font-size: 1.2rem;
-}
-
-.context-item p {
-    line-height: 1.7;
-}
-
-.context-item strong {
-    color: #333;
-}
-
-/* Visual Indicator Styles */
 .visual-indicator {
     display: flex;
     justify-content: space-around;
-    margin: 30px 0 45px;
-    padding: 20px;
-    background: linear-gradient(135deg, #f0f4f8, #e1e8f0);
-    border-radius: 12px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    margin: 20px 0 40px;
+    padding: 15px;
+    background: #f0f4f8;
+    border-radius: 10px;
 }
 
 .indicator {
     text-align: center;
     flex: 1;
-    padding: 15px;
 }
 
 .indicator-icon {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
 }
 
-/* Conversation Container Styles */
 .conversation-container {
     position: relative;
-    margin-bottom: 40px;
-    background: #fafbfc;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
 }
 
 .conversation {
-    min-height: 220px;
+    min-height: 200px;
     transition: opacity 0.5s ease;
 }
 
 .exchange {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     display: flex;
 }
 
@@ -276,23 +200,17 @@ h1 {
 
 .speech-bubble {
     border-radius: 20px;
-    padding: 20px 25px;
+    padding: 15px 20px;
     position: relative;
     max-width: 70%;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-
-.speech-bubble:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .speech-bubble.left:after {
     content: '';
     position: absolute;
     left: -10px;
-    top: 25px;
+    top: 20px;
     border-width: 10px 10px 10px 0;
     border-style: solid;
     border-color: transparent #f5f5f5;
@@ -302,7 +220,7 @@ h1 {
     content: '';
     position: absolute;
     right: -10px;
-    top: 25px;
+    top: 20px;
     border-width: 10px 0 10px 10px;
     border-style: solid;
 }
@@ -343,168 +261,144 @@ h1 {
 
 .speaker {
     font-weight: bold;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     color: #4a6fa5;
-    font-size: 1rem;
-}
-
-.non-verbal {
-    font-style: italic;
-    color: #666;
     font-size: 0.9rem;
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px dashed #ddd;
 }
 
 .tone-indicator {
-    margin-top: 12px;
+    margin-top: 10px;
     font-style: italic;
     color: #666;
     text-align: center;
-    font-weight: 500;
 }
 
-/* Code Switch Button */
 .code-switch-btn {
     display: block;
-    margin: 35px auto;
-    background: linear-gradient(135deg, #4a6fa5, #3a5a85);
+    margin: 30px auto;
+    background: #4a6fa5;
     color: white;
     border: none;
-    border-radius: 30px;
-    padding: 15px 35px;
+    border-radius: 25px;
+    padding: 12px 25px;
     cursor: pointer;
-    font-size: 1.1rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    letter-spacing: 0.5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
 }
 
 .code-switch-btn:hover {
-    background: linear-gradient(135deg, #3a5a85, #2a4a75);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    background: #3a5a85;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 8px rgba(0,0,0,0.2);
 }
 
 .code-switch-btn:active {
     transform: translateY(0);
 }
 
-/* Analysis Sections */
-.performance-analysis, .linguistic-analysis {
+/* Updated: Renamed from .explanation to .analysis and enhanced */
+.analysis {
+    background: #e8f4f8;
+    border-left: 4px solid #4a6fa5;
+    padding: 25px;
+    border-radius: 0 5px 5px 0;
+    margin-top: 30px;
+}
+
+.analysis h3 {
+    margin-bottom: 20px;
+    color: #4a6fa5;
+    text-align: center;
+}
+
+/* NEW: Context header styles */
+.context-header {
     background: #f8f9fa;
-    border-radius: 12px;
-    padding: 30px;
-    margin: 30px 0;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #4a6fa5;
 }
 
-.performance-analysis {
-    border-left: 5px solid #28a745;
+.context-info h3 {
+    color: #4a6fa5;
+    margin-bottom: 5px;
 }
 
-.linguistic-analysis {
-    border-left: 5px solid #dc3545;
+.context-info p {
+    color: #666;
+    font-size: 0.9rem;
 }
 
-.performance-analysis h3, .linguistic-analysis h3 {
-    color: #333;
-    margin-bottom: 25px;
+/* NEW: Nonverbal narration styles */
+.nonverbal-narration {
+    margin: 15px 0;
     display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 1.6rem;
+    justify-content: center;
 }
 
+.narration-bubble {
+    background: #f8f9fa;
+    border: 2px dashed #4a6fa5;
+    border-radius: 15px;
+    padding: 12px 20px;
+    max-width: 80%;
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* NEW: Analysis grid styles */
 .analysis-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-.analysis-item {
+.analysis-point {
     background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.analysis-item:hover {
-    transform: translateY(-3px);
-}
-
-.analysis-item h4 {
+.analysis-point h4 {
     color: #4a6fa5;
-    margin-bottom: 18px;
-    border-bottom: 2px solid #e9ecef;
-    padding-bottom: 10px;
-    font-size: 1.3rem;
-}
-
-.analysis-item ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.analysis-item li {
     margin-bottom: 10px;
-    padding-left: 25px;
-    position: relative;
-    line-height: 1.6;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 5px;
 }
 
-.analysis-item li:before {
-    content: "•";
-    color: #4a6fa5;
-    font-weight: bold;
-    position: absolute;
-    left: 10px;
-    font-size: 1.2rem;
+.analysis-point p {
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
-.analysis-item strong {
-    color: #333;
-}
-
-/* Explanation Section */
-.explanation {
-    background: #e8f4f8;
-    border-left: 5px solid #4a6fa5;
-    padding: 25px;
-    border-radius: 0 10px 10px 0;
-    margin-top: 35px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
-}
-
-.explanation h3 {
-    margin-bottom: 15px;
-    color: #4a6fa5;
-    font-size: 1.4rem;
-}
-
-.explanation p {
-    line-height: 1.7;
-}
-
-/* Background colors for different scenarios when active */
+/* UPDATED: Enhanced scenario backgrounds with gradients */
 #brawlhallaScenario.active {
-    background-color: #f0f7ff;
+    background: linear-gradient(135deg, #f0f7ff 0%, #e6f2ff 100%);
 }
 
 #gymScenario.active {
-    background-color: #f0fff0;
+    background: linear-gradient(135deg, #f0fff0 0%, #e6ffe6 100%);
 }
 
 #petsScenario.active {
-    background-color: #fffaf0;
+    background: linear-gradient(135deg, #fffaf0 0%, #fff5e6 100%);
+}
+
+/* UPDATED: Improved speech bubbles shadow */
+.speech-bubble {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 /* Animation for speech bubbles */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
+    from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
@@ -512,22 +406,7 @@ h1 {
     animation: fadeIn 0.5s ease;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .container {
-        max-width: 95%;
-        padding: 15px;
-    }
-    
-    .icon-card {
-        width: 250px;
-    }
-    
-    .context-grid, .analysis-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-}
-
+/* NEW: Mobile responsiveness for new elements */
 @media (max-width: 768px) {
     .main-menu {
         flex-direction: column;
@@ -536,11 +415,7 @@ h1 {
     
     .icon-card {
         width: 100%;
-        max-width: 350px;
-    }
-    
-    .scenario {
-        padding: 25px 20px;
+        max-width: 300px;
     }
     
     .speech-bubble {
@@ -549,89 +424,19 @@ h1 {
     
     .visual-indicator {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
     }
     
-    .context-grid, .analysis-grid {
+    .analysis-grid {
         grid-template-columns: 1fr;
     }
     
-    .ethnographic-context, .performance-analysis, .linguistic-analysis {
-        padding: 20px;
-    }
-    
-    h1 {
-        font-size: 2.2rem;
-    }
-    
-    .scenario-title {
-        font-size: 1.8rem;
-    }
-    
-    .exchange {
-        flex-direction: column;
-    }
-    
-    .speech-bubble.right, .speech-bubble.left {
-        max-width: 90%;
-        margin: 10px 0 !important;
-    }
-    
-    .speech-bubble.right:after, .speech-bubble.left:after {
-        display: none;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 20px 15px;
-    }
-    
-    h1 {
-        font-size: 1.8rem;
-    }
-    
-    .subtitle {
-        font-size: 1.1rem;
-    }
-    
-    .scenario {
-        padding: 20px 15px;
-    }
-    
-    .speech-bubble {
-        padding: 15px 18px;
+    .narration-bubble {
         max-width: 95%;
+        font-size: 0.9rem;
     }
     
-    .code-switch-btn {
-        padding: 12px 25px;
-        font-size: 1rem;
-    }
-    
-    .back-btn {
-        position: relative;
-        top: 0;
-        left: 0;
-        margin-bottom: 20px;
-    }
-}
-
-/* Print Styles */
-@media print {
-    .icon-card, .back-btn, .code-switch-btn {
-        display: none;
-    }
-    
-    .scenario {
-        display: block !important;
-        break-inside: avoid;
-        box-shadow: none;
-        border: 1px solid #ccc;
-    }
-    
-    body {
-        background: white;
-        color: black;
+    .context-info p {
+        font-size: 0.8rem;
     }
 }
