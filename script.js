@@ -1,3 +1,5 @@
+// Enhanced script.js with background color changes
+
 // Show the main menu and hide all scenarios
 function showMainMenu() {
     document.getElementById('mainMenu').style.display = 'flex';
@@ -31,10 +33,12 @@ function showScenario(scenarioId) {
 }
 
 // Set up event listeners for the icon cards
-document.querySelectorAll('.icon-card').forEach(card => {
-    card.addEventListener('click', function() {
-        const scenario = this.getAttribute('data-scenario') + 'Scenario';
-        showScenario(scenario);
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.icon-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const scenario = this.getAttribute('data-scenario') + 'Scenario';
+            showScenario(scenario);
+        });
     });
 });
 
